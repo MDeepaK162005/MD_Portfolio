@@ -1,0 +1,207 @@
+/* ============================================ */
+/* RESET.CSS - Browser Reset & Base Styles      */
+/* ============================================ */
+
+/* ========================================== */
+/* 1. BOX SIZING RESET                       */
+/* ========================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================================== */
+/* 2. HTML & BODY RESET                      */
+/* ========================================== */
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-padding-top: 80px;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-primary);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: var(--leading-normal);
+    overflow-x: hidden;
+    transition: background-color var(--transition-slow), color var(--transition-slow);
+}
+
+/* ========================================== */
+/* 3. TYPOGRAPHY RESET                       */
+/* ========================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    color: var(--color-text-primary);
+}
+
+p {
+    margin-bottom: var(--space-4);
+    color: var(--color-text-secondary);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-base);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* ========================================== */
+/* 4. MEDIA RESET                            */
+/* ========================================== */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 1rem;
+}
+
+/* ========================================== */
+/* 5. FORM RESET                             */
+/* ========================================== */
+
+input,
+button,
+textarea,
+select {
+    font-family: var(--font-secondary);
+    font-size: var(--text-base);
+    border: none;
+    outline: none;
+    background: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px var(--color-bg-tertiary) inset !important;
+    -webkit-text-fill-color: var(--color-text-primary) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ========================================== */
+/* 6. TABLE RESET                            */
+/* ========================================== */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+/* ========================================== */
+/* 7. ACCESSIBILITY                          */
+/* ========================================== */
+
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+:target {
+    scroll-margin-top: 80px;
+}
+
+/* ========================================== */
+/* 8. UTILITY CLASSES                        */
+/* ========================================== */
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* ========================================== */
+/* 9. REDUCED MOTION                         */
+/* ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ========================================== */
+/* 10. PRINT STYLES                          */
+/* ========================================== */
+
+@media print {
+    body {
+        background: #fff !important;
+        color: #000 !important;
+    }
+    
+    .navbar,
+    .cursor-dot,
+    .cursor-circle,
+    .scroll-progress,
+    .back-to-top,
+    .theme-toggle,
+    .hamburger {
+        display: none !important;
+    }
+    
+    .hero,
+    .about,
+    .skills,
+    .projects,
+    .experience,
+    .certificates,
+    .services,
+    .contact,
+    .footer {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}

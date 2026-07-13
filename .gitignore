@@ -1,0 +1,193 @@
+# ============================================
+# .gitignore - Deepak AI Portfolio
+# ============================================
+
+# ============================================
+# 1. DEPENDENCIES
+# ============================================
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ============================================
+# 2. ENVIRONMENT FILES
+# ============================================
+
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# ============================================
+# 3. IDE / EDITOR FILES
+# ============================================
+
+# VS Code
+.vscode/
+*.code-workspace
+.vscode/settings.json
+.vscode/launch.json
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# ============================================
+# 4. OS FILES
+# ============================================
+
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+*.AppleDouble
+
+# Linux
+*~
+.directory
+*.swp
+*.swo
+
+# ============================================
+# 5. BUILD / DIST FILES
+# ============================================
+
+dist/
+build/
+public/build/
+*.min.css
+*.min.js
+*.map
+
+# ============================================
+# 6. LOGS & CACHE
+# ============================================
+
+logs/
+*.log
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vuepress/dist/
+
+# ============================================
+# 7. TEMP FILES
+# ============================================
+
+tmp/
+temp/
+*.tmp
+*.temp
+
+# ============================================
+# 8. SECURITY FILES
+# ============================================
+
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.truststore
+
+# ============================================
+# 9. BACKUP FILES
+# ============================================
+
+*.bak
+*.backup
+*-backup
+*.old
+*.orig
+
+# ============================================
+# 10. COMPRESSED FILES
+# ============================================
+
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+# ============================================
+# 11. PERSONAL FILES
+# ============================================
+
+# Resume (if you want to keep it private)
+# assets/resume/*.pdf
+
+# Images (if you want to keep private)
+# assets/images/*.jpg
+# assets/images/*.png
+
+# ============================================
+# 12. DEPLOYMENT
+# ============================================
+
+vercel.json
+netlify.toml
+
+# ============================================
+# 13. MISC
+# ============================================
+
+*.swp
+.sass-cache/
+*.scssc
+*.css.map
+*.min.css.map
+*.js.map
+*.min.js.map
+coverage/
+.nyc_output/
+
+# ============================================
+# 14. DATABASE
+# ============================================
+
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# ============================================
+# 15. SECRETS
+# ============================================
+
+# NEVER COMMIT THESE
+*.secrets
+*.secret
+*.private
+*.password
+*.key
