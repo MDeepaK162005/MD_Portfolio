@@ -6,16 +6,10 @@
     <meta name="description" content="Deepak - AI Engineer & Full Stack Developer" />
     <meta name="theme-color" content="#0A0A0A" />
     <title>Deepak | AI Engineer & Developer</title>
-    
-    <!-- ========== PREMIUM FONTS ========== -->
-    <!-- Playfair Display - For Headings (Royal Look) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet" />
-    
-    <!-- Inter - For Body Text (Clean & Modern) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    
+
+<!-- ========== FAVICON - MD LOGO ========== -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0A0A' rx='20'/%3E%3Ctext x='50' y='68' font-size='40' text-anchor='middle' fill='%23D4AF37' font-family='Arial' font-weight='bold'%3EMD%3C/text%3E%3C/svg%3E" />
+<link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0A0A' rx='20'/%3E%3Ctext x='50' y='68' font-size='40' text-anchor='middle' fill='%23D4AF37' font-family='Arial' font-weight='bold'%3EMD%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     
@@ -30,33 +24,27 @@
         /* ============================================ */
         /* FONTS & VARIABLES                           */
         /* ============================================ */
+
+
         :root {
-            /* Gold Colors - Light & Classy */
             --gold: #D4AF37;
             --gold-light: #E8C84A;
             --gold-dark: #B8962E;
             --gold-subtle: rgba(212, 175, 55, 0.15);
             --gold-glow: rgba(212, 175, 55, 0.25);
             --gold-glow-strong: rgba(212, 175, 55, 0.4);
-            
-            /* Background */
             --black: #0A0A0A;
             --black-light: #141414;
             --black-card: #1A1A1A;
             --black-hover: #222222;
-            
-            /* Text */
             --white: #FFFFFF;
             --gray: #999999;
             --text-light: #CCCCCC;
             --text-muted: #777777;
-            
-            /* Fonts */
             --font-display: 'Playfair Display', serif;
             --font-body: 'Inter', sans-serif;
         }
 
-        /* ========== RESET ========== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
@@ -73,15 +61,11 @@
         section { padding: 100px 0; position: relative; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* ========== SCROLLBAR ========== */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: var(--black); }
         ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
-
-        /* ========== SELECTION ========== */
         ::selection { background: var(--gold); color: var(--black); }
 
-        /* ========== TYPOGRAPHY ========== */
         h1, h2, h3, h4, h5, h6 {
             font-family: var(--font-display);
             font-weight: 700;
@@ -122,7 +106,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* ========== BUTTONS - Light Gold ========== */
         .btn-gold {
             display: inline-flex;
             align-items: center;
@@ -235,6 +218,20 @@
             50% { transform: scale(1.05); opacity: 1; }
         }
 
+
+        .logo-icon {
+    width: 40px !important;
+    height: 40px !important;
+    background: #D4AF37 !important;
+    color: #0A0A0A !important;
+    border-radius: 10px !important;
+    font-size: 22px !important;
+    font-weight: 900 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
         /* ========== NAVBAR ========== */
         .navbar {
             position: fixed;
@@ -277,6 +274,12 @@
             font-size: 18px;
             font-weight: 900;
             font-family: var(--font-display);
+            box-shadow: 0 0 20px var(--gold-glow);
+            transition: all 0.3s ease;
+        }
+        .logo:hover .logo-icon {
+            transform: scale(1.05) rotate(-5deg);
+            box-shadow: 0 0 40px var(--gold-glow-strong);
         }
         .logo-text { color: var(--white); letter-spacing: -0.5px; }
         .logo-dot { color: var(--gold); }
@@ -348,7 +351,7 @@
         .hamburger.active span:nth-child(2) { opacity: 0; }
         .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-        /* ========== HERO - Light Gold ========== */
+        /* ========== HERO ========== */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -1173,7 +1176,7 @@
         }
         .footer-wrapper {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr;
             gap: 40px;
             margin-bottom: 35px;
         }
@@ -1225,19 +1228,32 @@
             padding-top: 20px;
             border-top: 1px solid var(--gold-subtle);
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             flex-wrap: wrap;
             gap: 12px;
+            position: relative;
         }
-        .footer-bottom p {
+        .footer-copyright {
             font-family: var(--font-body);
             color: var(--text-light);
             font-size: 13px;
             font-weight: 300;
+            text-align: center;
+            margin: 0;
+            flex: 1;
         }
-        .footer-bottom .fa-heart { color: var(--gold); }
-
+        .footer-copyright .fa-heart {
+            color: #D4AF37;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            14% { transform: scale(1.2); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.2); }
+            70% { transform: scale(1); }
+        }
         .back-to-top {
             width: 40px;
             height: 40px;
@@ -1251,6 +1267,8 @@
             opacity: 0;
             visibility: hidden;
             transform: translateY(15px);
+            position: absolute;
+            right: 0;
         }
         .back-to-top.visible {
             opacity: 1;
@@ -1261,6 +1279,50 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 25px var(--gold-glow);
         }
+
+
+        /* ========== LOGO "D" ICON ========== */
+.logo-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #D4AF37, #B8962E);
+    color: #0A0A0A;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: var(--font-display);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.logo:hover .logo-icon {
+    transform: scale(1.08) rotate(-5deg);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-text {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.5px;
+}
+
+.logo-dot {
+    color: #D4AF37;
+}
+
 
         /* ========== SCROLL PROGRESS ========== */
         .scroll-progress {
@@ -1396,11 +1458,18 @@
     </style>
 </head>
 
+
+
 <body>
-    <!-- ========== LOADING ========== -->
+
+        <!-- ========== LOADING ========== -->
     <div id="loader">
         <div class="loader-content">
-            <div class="loader-logo">MD</div>
+             <center>
+            <div class="loader-logo">
+                <img src="assets/image/logo.png" alt="Deepak Logo" style="width: 80px; height: 80px; object-fit: contain;" />
+            </div>
+            </center>
             <h2 class="loader-title">Initializing Portfolio...</h2>
             <div class="loader-bar-container">
                 <div class="loader-bar" id="loaderBar"></div>
@@ -1408,6 +1477,8 @@
             <p class="loader-percent" id="loaderPercent">0%</p>
         </div>
     </div>
+
+
 
     <!-- ========== CURSOR ========== -->
     <div class="cursor-dot" id="cursorDot"></div>
@@ -1426,8 +1497,8 @@
             <div class="container">
                 <div class="navbar-wrapper">
                     <a href="#hero" class="logo">
-                        <span class="logo-icon">M</span>
-                        <span class="logo-text">Deepak</span>
+                        <img src="assets/image/logo.png" alt="Deepak Logo" style="height: 40px; width: auto; object-fit: contain;" />
+                        <span class="logo-text">Deepak<span class="logo-dot">.</span></span>
                     </a>
                     <nav class="nav-links" id="navLinks">
                         <ul>
@@ -1447,11 +1518,11 @@
                 </div>
             </div>
         </header>
-        <!-- ========== HERO SECTION ========== -->
+
+        <!-- ========== HERO ========== -->
         <section class="hero" id="hero">
             <div class="container">
                 <div class="hero-wrapper">
-                    <!-- LEFT SIDE - TEXT CONTENT -->
                     <div class="hero-content" data-aos="fade-right">
                         <span class="hero-greeting">
                             <span class="greeting-wave">👋</span> Hello, I'm
@@ -1471,38 +1542,28 @@
                             <a href="#" class="btn-outline-gold"><i class="fas fa-download"></i> Download CV</a>
                         </div>
                         <div class="hero-social">
-
-
-    <!-- GitHub -->
-    <a href="https://github.com/WDeepak162005" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-    </a>
-    
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/deepak-m-6a3ob3264/" target="_blank" title="LinkedIn">
-        <i class="fab fa-linkedin-in"></i>
-    </a>
-    
-    <!-- GMAIL - Opens Gmail (Not Outlook!) -->
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=deepakmohan705@gmail.com&su=Hiring%20Process%20-%20Deepak&body=Hi%20Deepak%2C%0A%0AI%20came%20across%20your%20profile%20and%20I'm%20impressed%20with%20your%20work.%0A%0AI%20would%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20your%20availability%20for%20a%20quick%20chat.%0A%0AThanks%2C%0A[Your%20Name]" target="_blank" title="Email Me on Gmail">
-        <i class="fas fa-envelope"></i>
-    </a>
-</div>
+                            <a href="https://github.com/MDeepaK162005" target="_blank" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/deepak-m-6a3ob3264/" target="_blank" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=deepakmohan705@gmail.com&su=Hiring%20Process%20-%20Deepak&body=Hi%20Deepak%2C%0A%0AI%20came%20across%20your%20profile%20and%20I'm%20impressed%20with%20your%20work.%0A%0AI%20would%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20your%20availability%20for%20a%20quick%20chat.%0A%0AThanks%2C%0A[Your%20Name]" target="_blank" title="Email Me on Gmail">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
                     </div>
 
-                    <!-- RIGHT SIDE - PHOTO WITH 3D CARD -->
                     <div class="hero-image-wrapper" data-aos="fade-left">
                         <div class="hero-image-card" id="heroCard">
-                            <!-- Glow Effect -->
                             <div class="hero-image-glow"></div>
-                            
-                            <!-- 👇👇👇 YOUR PHOTO HERE 👇👇👇 -->
                             <img src="assets/image/profile.jpg" alt="Deepak - AI Engineer" />
-                            <!-- 👆👆👆 YOUR PHOTO HERE 👆👆👆 -->
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- ========== ABOUT ========== -->
         <section class="about" id="about">
             <div class="container">
@@ -1541,10 +1602,8 @@
                     </div>
                     <div class="about-text" data-aos="fade-left">
                         <h3>Passionate about AI & Innovation</h3>
-                        <p>I'm a final-year Information Technology student passionate about building intelligent software and modern web applications. My interests span Artificial Intelligence, Machine Learning, and Full-Stack Development,
-                           where I enjoy combining technology with creative problem-solving.</p>
-                        <p>I believe every project is an opportunity to learn something new, 
-                          improve my skills, and create solutions that make a meaningful impact.</p>
+                        <p>I'm a final-year Information Technology student passionate about building intelligent software and modern web applications. My interests span Artificial Intelligence, Machine Learning, and Full-Stack Development, where I enjoy combining technology with creative problem-solving.</p>
+                        <p>I believe every project is an opportunity to learn something new, improve my skills, and create solutions that make a meaningful impact.</p>
                         <div class="about-stats">
                             <div class="stat-item"><span class="stat-number" data-count="15">0</span><span class="stat-label">Projects</span></div>
                             <div class="stat-item"><span class="stat-number" data-count="12">0</span><span class="stat-label">Certificates</span></div>
@@ -1565,172 +1624,42 @@
                     <h2 class="section-title">My <span>Tools</span></h2>
                     <p class="section-subtitle">Technologies I work with daily</p>
                 </div>
-               <div class="tech-grid">
-    <!-- Python -->
-    <div class="tech-item" data-aos="zoom-in">
-        <div class="tech-icon"><i class="fab fa-python"></i></div>
-        <span class="tech-name">Python</span>
-    </div>
-    
-    <!-- ML / DL -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="50">
-        <div class="tech-icon"><i class="fas fa-brain"></i></div>
-        <span class="tech-name">ML & DL</span>
-    </div>
-    
-    <!-- GenAI -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="100">
-        <div class="tech-icon"><i class="fas fa-robot"></i></div>
-        <span class="tech-name">GenAI</span>
-    </div>
-    
-    <!-- Agentic AI -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="150">
-        <div class="tech-icon"><i class="fas fa-users-cog"></i></div>
-        <span class="tech-name">Agentic AI</span>
-    </div>
-    
-    <!-- AI Agent -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="200">
-        <div class="tech-icon"><i class="fas fa-android"></i></div>
-        <span class="tech-name">AI Agent</span>
-    </div>
-    
-    <!-- RAG -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="250">
-        <div class="tech-icon"><i class="fas fa-network-wired"></i></div>
-        <span class="tech-name">RAG</span>
-    </div>
-    
-    <!-- TensorFlow -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="300">
-        <div class="tech-icon"><i class="fas fa-chart-line"></i></div>
-        <span class="tech-name">TensorFlow</span>
-    </div>
-    
-    <!-- OpenCV -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="350">
-        <div class="tech-icon"><i class="fas fa-eye"></i></div>
-        <span class="tech-name">OpenCV</span>
-    </div>
-    
-    <!-- HTML5 -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="400">
-        <div class="tech-icon"><i class="fab fa-html5"></i></div>
-        <span class="tech-name">HTML5</span>
-    </div>
-    
-    <!-- CSS3 -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="450">
-        <div class="tech-icon"><i class="fab fa-css3-alt"></i></div>
-        <span class="tech-name">CSS3</span>
-    </div>
-    
-    <!-- JavaScript -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="500">
-        <div class="tech-icon"><i class="fab fa-js"></i></div>
-        <span class="tech-name">JavaScript</span>
-    </div>
-    
-    <!-- Node.js -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="550">
-        <div class="tech-icon"><i class="fab fa-node"></i></div>
-        <span class="tech-name">Node.js</span>
-    </div>
-    
-    <!-- Firebase -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="600">
-        <div class="tech-icon"><i class="fas fa-fire"></i></div>
-        <span class="tech-name">Firebase</span>
-    </div>
-    
-    <!-- MongoDB -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="650">
-        <div class="tech-icon"><i class="fas fa-database"></i></div>
-        <span class="tech-name">MongoDB</span>
-    </div>
-    
-    <!-- VS Code -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="700">
-        <div class="tech-icon"><i class="fas fa-code"></i></div>
-        <span class="tech-name">VS Code</span>
-    </div>
-    
-    <!-- Git -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="750">
-        <div class="tech-icon"><i class="fab fa-git-alt"></i></div>
-        <span class="tech-name">Git</span>
-    </div>
-    
-    <!-- GitHub -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="800">
-        <div class="tech-icon"><i class="fab fa-github"></i></div>
-        <span class="tech-name">GitHub</span>
-    </div>
-    
-    <!-- Cursor AI -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="850">
-        <div class="tech-icon"><i class="fas fa-mouse-pointer"></i></div>
-        <span class="tech-name">Cursor AI</span>
-    </div>
-    
-    <!-- Antigravity -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="900">
-        <div class="tech-icon"><i class="fas fa-rocket"></i></div>
-        <span class="tech-name">Antigravity</span>
-    </div>
-    
-    <!-- Claude AI -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="950">
-        <div class="tech-icon"><i class="fas fa-comment-dots"></i></div>
-        <span class="tech-name">Claude AI</span>
-    </div>
-    
-    <!-- ChatGPT -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="1000">
-        <div class="tech-icon"><i class="fas fa-comment"></i></div>
-        <span class="tech-name">ChatGPT</span>
-    </div>
-    
-    <!-- Perplexity -->
-    <div class="tech-item" data-aos="zoom-in" data-aos-delay="1050">
-        <div class="tech-icon"><i class="fas fa-search"></i></div>
-        <span class="tech-name">Perplexity</span>
-    </div>
-</div>
+                <div class="tech-grid">
+                    <div class="tech-item" data-aos="zoom-in"><div class="tech-icon"><i class="fab fa-python"></i></div><span class="tech-name">Python</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="50"><div class="tech-icon"><i class="fas fa-brain"></i></div><span class="tech-name">ML & DL</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="100"><div class="tech-icon"><i class="fas fa-robot"></i></div><span class="tech-name">GenAI</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="150"><div class="tech-icon"><i class="fas fa-users-cog"></i></div><span class="tech-name">Agentic AI</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="200"><div class="tech-icon"><i class="fas fa-android"></i></div><span class="tech-name">AI Agent</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="250"><div class="tech-icon"><i class="fas fa-network-wired"></i></div><span class="tech-name">RAG</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="300"><div class="tech-icon"><i class="fas fa-chart-line"></i></div><span class="tech-name">TensorFlow</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="350"><div class="tech-icon"><i class="fas fa-eye"></i></div><span class="tech-name">OpenCV</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="400"><div class="tech-icon"><i class="fab fa-html5"></i></div><span class="tech-name">HTML5</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="450"><div class="tech-icon"><i class="fab fa-css3-alt"></i></div><span class="tech-name">CSS3</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="500"><div class="tech-icon"><i class="fab fa-js"></i></div><span class="tech-name">JavaScript</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="550"><div class="tech-icon"><i class="fab fa-node"></i></div><span class="tech-name">Node.js</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="600"><div class="tech-icon"><i class="fas fa-fire"></i></div><span class="tech-name">Firebase</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="650"><div class="tech-icon"><i class="fas fa-database"></i></div><span class="tech-name">MongoDB</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="700"><div class="tech-icon"><i class="fas fa-code"></i></div><span class="tech-name">VS Code</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="750"><div class="tech-icon"><i class="fab fa-git-alt"></i></div><span class="tech-name">Git</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="800"><div class="tech-icon"><i class="fab fa-github"></i></div><span class="tech-name">GitHub</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="850"><div class="tech-icon"><i class="fas fa-mouse-pointer"></i></div><span class="tech-name">Cursor AI</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="900"><div class="tech-icon"><i class="fas fa-rocket"></i></div><span class="tech-name">Antigravity</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="950"><div class="tech-icon"><i class="fas fa-comment-dots"></i></div><span class="tech-name">Claude AI</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="1000"><div class="tech-icon"><i class="fas fa-comment"></i></div><span class="tech-name">ChatGPT</span></div>
+                    <div class="tech-item" data-aos="zoom-in" data-aos-delay="1050"><div class="tech-icon"><i class="fas fa-search"></i></div><span class="tech-name">Perplexity</span></div>
+                </div>
             </div>
         </section>
 
         <!-- ========== SKILLS ========== -->
         <section class="skills" id="skills">
             <div class="container">
-
                 <div class="section-header" data-aos="fade-up">
                     <span class="section-tag">My Skills</span>
                     <h2 class="section-title">What I <span>Excel At</span></h2>
                     <p class="section-subtitle">My expertise across different domains</p>
                 </div>
                 <div class="skills-grid">
-
-                  <div class="skill-card" data-aos="flip-up" data-aos-delay="400">
-                        <div class="skill-circle" data-percent="75">
-                            <svg viewBox="0 0 120 120"><circle class="skill-bg" cx="60" cy="60" r="50"/><circle class="skill-progress" cx="60" cy="60" r="50"/></svg>
-                            <div class="skill-percent">75%</div>
-                        </div>
-                        <h4 class="skill-name">AI / LLM</h4>
-                        <p class="skill-desc">Gemini, OpenAI</p>
-                    </div>
-
-                    <div class="skill-card" data-aos="flip-up" data-aos-delay="200">
-                        <div class="skill-circle" data-percent="85">
-                            <svg viewBox="0 0 120 120"><circle class="skill-bg" cx="60" cy="60" r="50"/><circle class="skill-progress" cx="60" cy="60" r="50"/></svg>
-                            <div class="skill-percent">85%</div>
-                        </div>
-                        <h4 class="skill-name">Machine Learning</h4>
-                        <p class="skill-desc">TensorFlow</p>
-                    </div>
-
-
                     <div class="skill-card" data-aos="flip-up">
                         <div class="skill-circle" data-percent="95">
                             <svg viewBox="0 0 120 120"><circle class="skill-bg" cx="60" cy="60" r="50"/><circle class="skill-progress" cx="60" cy="60" r="50"/></svg>
@@ -1739,29 +1668,41 @@
                         <h4 class="skill-name">Python</h4>
                         <p class="skill-desc">Advanced</p>
                     </div>
-
                     <div class="skill-card" data-aos="flip-up" data-aos-delay="100">
                         <div class="skill-circle" data-percent="90">
                             <svg viewBox="0 0 120 120"><circle class="skill-bg" cx="60" cy="60" r="50"/><circle class="skill-progress" cx="60" cy="60" r="50"/></svg>
-                            <div class="skill-percent">80%</div>
+                            <div class="skill-percent">90%</div>
                         </div>
                         <h4 class="skill-name">Frontend</h4>
                         <p class="skill-desc">React, HTML, CSS</p>
                     </div>
-
-                    
-
+                    <div class="skill-card" data-aos="flip-up" data-aos-delay="200">
+                        <div class="skill-circle" data-percent="85">
+                            <svg viewBox="0 0 120 120"><circle class="skill-bg" cx="60" cy="60" r="50"/><circle class="skill-progress" cx="60" cy="60" r="50"/></svg>
+                            <div class="skill-percent">85%</div>
+                        </div>
+                        <h4 class="skill-name">Machine Learning</h4>
+                        <p class="skill-desc">TensorFlow</p>
+                    </div>
                     <div class="skill-card" data-aos="flip-up" data-aos-delay="300">
                         <div class="skill-circle" data-percent="80">
                             <svg viewBox="0 0 120 120"><circle class="skill-bg" cx="60" cy="60" r="50"/><circle class="skill-progress" cx="60" cy="60" r="50"/></svg>
-                            <div class="skill-percent">60%</div>
+                            <div class="skill-percent">80%</div>
                         </div>
                         <h4 class="skill-name">Backend</h4>
                         <p class="skill-desc">Node.js, Firebase</p>
                     </div>
-
-                    
-                  </section>
+                    <div class="skill-card" data-aos="flip-up" data-aos-delay="400">
+                        <div class="skill-circle" data-percent="75">
+                            <svg viewBox="0 0 120 120"><circle class="skill-bg" cx="60" cy="60" r="50"/><circle class="skill-progress" cx="60" cy="60" r="50"/></svg>
+                            <div class="skill-percent">75%</div>
+                        </div>
+                        <h4 class="skill-name">AI / LLM</h4>
+                        <p class="skill-desc">Gemini, OpenAI</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- ========== EXPERIENCE ========== -->
         <section class="experience" id="experience">
@@ -2023,7 +1964,7 @@
             </div>
         </section>
 
-                             <!-- ========== CONTACT ========== -->
+        <!-- ========== CONTACT ========== -->
         <section class="contact" id="contact">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
@@ -2032,96 +1973,44 @@
                     <p class="section-subtitle">Let's connect and discuss your project</p>
                 </div>
                 <div class="contact-wrapper">
-                    <!-- LEFT SIDE - CONTACT INFO -->
                     <div class="contact-info" data-aos="fade-right">
                         <h3>Let's Talk</h3>
                         <p>Feel free to reach out for collaborations, project discussions, or just a friendly chat.</p>
-                        
-                        <!-- Location -->
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div>
-                                <h5>Location</h5>
-                                <p>Komarapalayam, Namakkal, Tamil Nadu</p>
-                            </div>
+                            <div><h5>Location</h5><p>Komarapalayam, Namakkal, Tamil Nadu</p></div>
                         </div>
-                        
-                        <!-- Phone -->
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                            <div>
-                                <h5>Phone</h5>
-                                <p><a href="tel:+918072658651" style="color: #D4AF37; text-decoration: none;">+91 80726 58651</a></p>
-                            </div>
+                            <div><h5>Phone</h5><p><a href="tel:+918072658651" style="color: #D4AF37; text-decoration: none;">+91 80726 58651</a></p></div>
                         </div>
-                        
-                        <!-- Email -->
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div>
-                                <h5>Email</h5>
-                                <p>
-                                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=deepakmohan705@gmail.com&su=Hiring%20Process%20-%20Deepak&body=Hi%20Deepak%2C%0A%0AI%20came%20across%20your%20profile%20and%20I'm%20impressed%20with%20your%20work.%0A%0AI%20would%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20your%20availability%20for%20a%20quick%20chat.%0A%0AThanks%2C%0A[Your%20Name]" 
-                                       target="_blank" 
-                                       style="color: #D4AF37; text-decoration: none; font-weight: 500; transition: all 0.3s ease;"
-                                       onmouseover="this.style.color='#FFE44D'; this.style.textShadow='0 0 20px rgba(212,175,55,0.3)';"
-                                       onmouseout="this.style.color='#D4AF37'; this.style.textShadow='none';">
-                                        <i class="fas fa-envelope" style="margin-right: 8px; color: #D4AF37;"></i>
-                                        deepakmohan705@gmail.com
-                                    </a>
-                                </p>
-                            </div>
+                            <div><h5>Email</h5><p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=deepakmohan705@gmail.com&su=Hiring%20Process%20-%20Deepak&body=Hi%20Deepak%2C%0A%0AI%20came%20across%20your%20profile%20and%20I'm%20impressed%20with%20your%20work.%0A%0AI%20would%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20your%20availability%20for%20a%20quick%20chat.%0A%0AThanks%2C%0A[Your%20Name]" target="_blank" style="color: #D4AF37; text-decoration: none; font-weight: 500;">deepakmohan705@gmail.com</a></p></div>
                         </div>
-                        
-                        <!-- Social Icons - LIKE FOOTER -->
                         <div class="contact-social">
-                            <!-- GitHub -->
-                            <a href="https://github.com/MDeepaK162005" target="_blank" title="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            
-                            <!-- LinkedIn -->
-                            <a href="https://www.linkedin.com/in/deepak-m-6a3ob3264/" target="_blank" title="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            
-                            <!-- GMAIL - Opens Gmail (Like Footer!) -->
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=deepakmohan705@gmail.com&su=Hiring%20Process%20-%20Deepak&body=Hi%20Deepak%2C%0A%0AI%20came%20across%20your%20profile%20and%20I'm%20impressed%20with%20your%20work.%0A%0AI%20would%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20your%20availability%20for%20a%20quick%20chat.%0A%0AThanks%2C%0A[Your%20Name]" 
-                               target="_blank" 
-                               title="Email Me on Gmail">
-                                <i class="fas fa-envelope"></i>
-                            </a>
+                            <a href="https://github.com/MDeepaK162005" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/deepak-m-6a3ob3264/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=deepakmohan705@gmail.com&su=Hiring%20Process%20-%20Deepak&body=Hi%20Deepak%2C%0A%0AI%20came%20across%20your%20profile%20and%20I'm%20impressed%20with%20your%20work.%0A%0AI%20would%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20your%20availability%20for%20a%20quick%20chat.%0A%0AThanks%2C%0A[Your%20Name]" target="_blank"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
-                    
-                    <!-- RIGHT SIDE - CONTACT FORM -->
                     <div class="contact-form" data-aos="fade-left">
                         <form id="contactForm">
-                            <div class="form-group">
-                                <input type="text" placeholder="Your Name" required />
-                            </div>
-                            <div class="form-group">
-                                <input type="email" placeholder="Your Email" required />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" placeholder="Subject" />
-                            </div>
-                            <div class="form-group">
-                                <textarea placeholder="Your Message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn-gold btn-full">
-                                <i class="fas fa-paper-plane"></i> Send Message
-                            </button>
+                            <div class="form-group"><input type="text" placeholder="Your Name" required /></div>
+                            <div class="form-group"><input type="email" placeholder="Your Email" required /></div>
+                            <div class="form-group"><input type="text" placeholder="Subject" /></div>
+                            <div class="form-group"><textarea placeholder="Your Message" rows="5" required></textarea></div>
+                            <button type="submit" class="btn-gold btn-full"><i class="fas fa-paper-plane"></i> Send Message</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
-                <!-- ========== FOOTER ========== -->
+
+        <!-- ========== FOOTER ========== -->
         <footer class="footer">
             <div class="container">
                 <div class="footer-wrapper">
-                    <!-- Brand -->
                     <div class="footer-brand">
                         <a href="#hero" class="logo">
                             <span class="logo-icon">D</span>
@@ -2129,8 +2018,6 @@
                         </a>
                         <p>Building intelligent AI solutions, automations, and modern web applications.</p>
                     </div>
-                    
-                    <!-- Quick Links -->
                     <div class="footer-links">
                         <h4>Quick Links</h4>
                         <ul>
@@ -2140,46 +2027,25 @@
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
-                    
-                    <!-- Connect - Social Icons -->
                     <div class="footer-social">
                         <h4>Connect</h4>
                         <div class="social-icons">
-                            <!-- GitHub -->
-                            <a href="https://github.com/MDeepaK162005" target="_blank" title="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            
-                            <!-- LinkedIn -->
-                            <a href="https://www.linkedin.com/in/deepak-m-6a3ob3264/" target="_blank" title="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            
-                            <!-- GMAIL -->
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=deepakmohan705@gmail.com&su=Hiring%20Process%20-%20Deepak&body=Hi%20Deepak%2C%0A%0AI%20came%20across%20your%20profile%20and%20I'm%20impressed%20with%20your%20work.%0A%0AI%20would%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20your%20availability%20for%20a%20quick%20chat.%0A%0AThanks%2C%0A[Your%20Name]" target="_blank" title="Email Me on Gmail">
-                                <i class="fas fa-envelope"></i>
-                            </a>
+                            <a href="https://github.com/MDeepaK162005" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/deepak-m-6a3ob3264/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=deepakmohan705@gmail.com&su=Hiring%20Process%20-%20Deepak&body=Hi%20Deepak%2C%0A%0AI%20came%20across%20your%20profile%20and%20I'm%20impressed%20with%20your%20work.%0A%0AI%20would%20like%20to%20discuss%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20your%20availability%20for%20a%20quick%20chat.%0A%0AThanks%2C%0A[Your%20Name]" target="_blank"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Bottom - Center Alignment -->
-              <div class="footer-bottom">
-                <p class="footer-copyright"> 
-                  &copy; 2026 Deepak. All rights reserved. | Crafted with Passion & Innovation <i class="fas fa-heart" style="color: #D4AF37;"></i>
-                </p>
-                <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
-              </div>
+                <div class="footer-bottom">
+                    <p class="footer-copyright">&copy; 2026 Deepak. All rights reserved. | Crafted with Passion & Innovation <i class="fas fa-heart" style="color: #D4AF37;"></i></p>
+                    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+                </div>
             </div>
         </footer>
-    </div> <!-- End main-content -->
+    </div>
 
-    
-        <!-- ========== SCRIPTS ========== -->
-
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    
+    <!-- ========== SCRIPTS ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
         // ============================================
         // LOADING SCREEN
@@ -2485,7 +2351,7 @@
         // ============================================
         (function() {
             emailjs.init({
-                publicKey: "3O1ZamXCaYNDSADmg", // ← REPLACE WITH YOUR PUBLIC KEY!
+                publicKey: "3O1ZamXCaYNDSADmg",
             });
         })();
 
@@ -2520,8 +2386,8 @@
                     };
 
                     emailjs.send(
-                        'service_j3p9ysk', // ← REPLACE WITH YOUR SERVICE ID!
-                        'template_0j4og1h', // ← REPLACE WITH YOUR TEMPLATE ID!
+                        'service_j3p9ysk',
+                        'template_0j4og1h',
                         templateParams
                     )
                     .then(function(response) {
@@ -2595,7 +2461,7 @@
             }
         })();
 
-        console.log('✨ Light Gold Portfolio loaded!');
+        console.log('✨ Deepak AI Portfolio loaded!');
         console.log('📧 EmailJS integrated!');
     </script>
 </body>
