@@ -923,70 +923,224 @@
             color: var(--gold);
         }
 
-        /* ========== CERTIFICATES ========== */
-        .certificates-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 20px;
-        }
-        .cert-card {
-            padding: 28px;
-            background: var(--black-light);
-            border-radius: 16px;
-            border: 1px solid var(--gold-subtle);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .cert-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-4px);
-            box-shadow: 0 6px 25px var(--gold-glow);
-        }
-        .cert-icon {
-            width: 54px;
-            height: 54px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 14px;
-            background: var(--gold-subtle);
-            border-radius: 50%;
-            font-size: 24px;
-            color: var(--gold);
-            transition: all 0.3s ease;
-        }
-        .cert-card:hover .cert-icon {
-            background: var(--gold);
-            color: var(--black);
-            transform: scale(1.1);
-        }
-        .cert-card h4 {
-            font-family: var(--font-display);
-            color: var(--white);
-            font-size: 17px;
-        }
-        .cert-org {
-            font-family: var(--font-body);
-            color: var(--gold);
-            font-size: 13px;
-            margin: 4px 0;
-            font-weight: 500;
-        }
-        .cert-year {
-            font-family: var(--font-body);
-            color: var(--text-light);
-            font-size: 12px;
-            font-weight: 300;
-        }
-        .cert-desc {
-            font-family: var(--font-body);
-            color: var(--text-light);
-            font-size: 13px;
-            margin-top: 8px;
-            line-height: 1.6;
-            font-weight: 300;
-        }
+       /* ========== CERTIFICATES ========== */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
 
+.cert-card {
+    padding: 30px 24px 24px;
+    background: var(--black-light);
+    border-radius: 16px;
+    border: 1px solid var(--gold-subtle);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cert-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--gold-subtle), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.cert-card:hover::before {
+    opacity: 1;
+}
+
+.cert-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 40px var(--gold-glow);
+}
+
+.cert-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    background: var(--gold-subtle);
+    border-radius: 50%;
+    font-size: 26px;
+    color: var(--gold);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.cert-card:hover .cert-icon {
+    background: var(--gold);
+    color: var(--black);
+    transform: scale(1.15) rotate(-5deg);
+    box-shadow: 0 0 30px var(--gold-glow-strong);
+}
+
+.cert-card h4 {
+    font-family: var(--font-display);
+    color: var(--white);
+    font-size: 18px;
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+.cert-org {
+    font-family: var(--font-body);
+    color: var(--gold);
+    font-size: 13px;
+    margin: 2px 0;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.cert-year {
+    font-family: var(--font-body);
+    color: var(--text-light);
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+.cert-desc {
+    font-family: var(--font-body);
+    color: var(--text-light);
+    font-size: 13px;
+    margin-top: 6px;
+    line-height: 1.6;
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+/* ========== CERTIFICATE BUTTON ========== */
+.cert-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    padding: 8px 20px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: var(--black);
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: var(--font-body);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+}
+
+.cert-btn i {
+    font-size: 12px;
+}
+
+.cert-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px var(--gold-glow-strong);
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+}
+
+.cert-btn:active {
+    transform: scale(0.97);
+}
+
+/* ========== CERTIFICATES RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+        gap: 18px;
+    }
+    
+    .cert-card {
+        padding: 24px 18px 20px;
+    }
+    
+    .cert-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+    
+    .cert-card h4 {
+        font-size: 16px;
+    }
+    
+    .cert-desc {
+        font-size: 12px;
+    }
+    
+    .cert-btn {
+        padding: 6px 16px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificates-grid {
+        gap: 14px;
+        max-width: 100%;
+    }
+    
+    .cert-card {
+        padding: 18px 14px 16px;
+        border-radius: 12px;
+    }
+    
+    .cert-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .cert-card h4 {
+        font-size: 15px;
+    }
+    
+    .cert-org {
+        font-size: 12px;
+    }
+    
+    .cert-year {
+        font-size: 11px;
+    }
+    
+    .cert-desc {
+        font-size: 12px;
+        margin-top: 4px;
+    }
+    
+    .cert-btn {
+        padding: 5px 14px;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+}
         /* ========== SERVICES ========== */
         .services { background: var(--black-light); }
         .services-grid {
@@ -1539,7 +1693,7 @@
                         </p>
                         <div class="hero-buttons">
                             <a href="#projects" class="btn-gold"><i class="fas fa-rocket"></i> View My Work</a>
-                            <a href="#" class="btn-outline-gold"><i class="fas fa-download"></i> Download CV</a>
+                            <a href="MD_Resume.pdf" class="btn-outline-gold"><i class="fas fa-download"></i> Download CV</a>
                         </div>
                         <div class="hero-social">
                             <a href="https://github.com/MDeepaK162005" target="_blank" title="GitHub">
@@ -1869,7 +2023,7 @@
             </div>
         </section>
 
-        <!-- ========== CERTIFICATES ========== -->
+                <!-- ========== CERTIFICATES ========== -->
         <section class="certificates" id="certificates">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
@@ -1878,34 +2032,47 @@
                     <p class="section-subtitle">Continuous learning and recognition</p>
                 </div>
                 <div class="certificates-grid">
+                    
+                    <!-- Certificate 1: Internship Training -->
                     <div class="cert-card" data-aos="flip-right">
-                        <div class="cert-icon"><i class="fas fa-trophy"></i></div>
-                        <h4>Top 500 Finalist</h4>
-                        <p class="cert-org">Naan Mudhalvan Niral Thiruvizha 3.0</p>
-                        <p class="cert-year">2025-2026</p>
-                        <p class="cert-desc">Recognized among Top 500 teams across Tamil Nadu</p>
+                        <div class="cert-icon"><i class="fas fa-briefcase"></i></div>
+                        <h4>Internship Training</h4>
+                        <p class="cert-org">FinTechGIE</p>
+                        <p class="cert-year">Feb 2025 - Jul 2025</p>
+                        <p class="cert-desc">Successfully completed internship training in Web Development</p>
+                        <a href="assets/certificates/internship.pdf" target="_blank" class="cert-btn">View Certificate</a>
                     </div>
+                    
+                    <!-- Certificate 2: AI Fundamentals -->
                     <div class="cert-card" data-aos="flip-right" data-aos-delay="100">
                         <div class="cert-icon"><i class="fas fa-brain"></i></div>
-                        <h4>AI Fundamentals</h4>
+                        <h4>Artificial Intelligence Fundamentals</h4>
                         <p class="cert-org">IBM SkillsBuild</p>
-                        <p class="cert-year">2025</p>
+                        <p class="cert-year">Dec 04, 2025</p>
                         <p class="cert-desc">Foundational knowledge in AI concepts and applications</p>
+                        <a href="assets/certificates/ai-foundations.pdf" target="_blank" class="cert-btn">View Certificate</a>
                     </div>
+                    
+                    <!-- Certificate 3: AI - Data Engineering Analyst -->
                     <div class="cert-card" data-aos="flip-right" data-aos-delay="200">
-                        <div class="cert-icon"><i class="fas fa-lightbulb"></i></div>
-                        <h4>Design Thinking</h4>
-                        <p class="cert-org">IBM SkillsBuild</p>
-                        <p class="cert-year">2025</p>
-                        <p class="cert-desc">Applied design thinking for creative problem solving</p>
+                        <div class="cert-icon"><i class="fas fa-chart-bar"></i></div>
+                        <h4>AI - Data Engineering Analyst</h4>
+                        <p class="cert-org">NASSCOM</p>
+                        <p class="cert-year">Jul 06, 2026</p>
+                        <p class="cert-desc">Completed online skilling course through Skill India Digital Hub</p>
+                        <a href="assets/certificates/ai-data-science.pdf" target="_blank" class="cert-btn">View Certificate</a>
                     </div>
+                    
+                    <!-- Certificate 4: Full-Stack Web Development -->
                     <div class="cert-card" data-aos="flip-right" data-aos-delay="300">
                         <div class="cert-icon"><i class="fas fa-code"></i></div>
-                        <h4>Frontend Development</h4>
-                        <p class="cert-org">Marcello Tech</p>
-                        <p class="cert-year">2025</p>
-                        <p class="cert-desc">Comprehensive training in modern frontend technologies</p>
+                        <h4>Full-Stack Web Development</h4>
+                        <p class="cert-org">Coursera</p>
+                        <p class="cert-year">Dec 03, 2024</p>
+                        <p class="cert-desc">Full-stack web developers and back-end developers certification</p>
+                        <a href="assets/certificates/fullstack.pdf" target="_blank" class="cert-btn">View Certificate</a>
                     </div>
+                    
                 </div>
             </div>
         </section>
