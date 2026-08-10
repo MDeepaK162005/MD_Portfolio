@@ -622,6 +622,11 @@
             color: var(--gold);
             display: block;
         }
+        .stat-plus {
+            font-size: 0.65em;
+            margin-left: 2px;
+            vertical-align: top;
+}
         .stat-label {
             font-family: var(--font-body);
             color: var(--text-light);
@@ -1769,14 +1774,26 @@
                     </div>
                     <div class="about-text" data-aos="fade-left">
                         <h3>Passionate about AI & Innovation</h3>
-                        <p>I'm a final-year Information Technology student passionate about building intelligent software and modern web applications. My interests span Artificial Intelligence, Machine Learning, and Full-Stack Development, where I enjoy combining technology with creative problem-solving.</p>
-                        <p>I believe every project is an opportunity to learn something new, improve my skills, and create solutions that make a meaningful impact.</p>
+                        <p>I’m a recent B.Tech Information Technology graduate passionate about building intelligent software, AI-powered applications, and modern web experiences. My interests span 
+                            Artificial Intelligence, Machine Learning, Generative AI, and Full-Stack Development, where I enjoy turning ideas into practical and user-focused solutions.</p>
+                        <p>I believe every project is an opportunity to learn, solve real-world problems, and continuously improve my technical skills. I’m currently looking for an entry-level opportunity where I can contribute to meaningful projects, 
+                            learn from experienced professionals, and grow as a software and AI engineer.</p>
                         <div class="about-stats">
-                            <div class="stat-item"><span class="stat-number" data-count="15">0</span><span class="stat-label">Projects</span></div>
-                            <div class="stat-item"><span class="stat-number" data-count="12">0</span><span class="stat-label">Certificates</span></div>
-                            <div class="stat-item"><span class="stat-number" data-count="10">0</span><span class="stat-label">Technologies</span></div>
-                            <div class="stat-item"><span class="stat-number" data-count="500">0</span><span class="stat-label">Coding Hours</span></div>
-                        </div>
+    <div class="stat-item">
+        <span class="stat-number" data-count="15">0<span class="stat-plus">+</span></span>
+        <span class="stat-label">Projects</span>
+    </div>
+
+    <div class="stat-item">
+        <span class="stat-number" data-count="12">0<span class="stat-plus">+</span></span>
+        <span class="stat-label">Certificates</span>
+    </div>
+
+    <div class="stat-item">
+        <span class="stat-number" data-count="10">0<span class="stat-plus">+</span></span>
+        <span class="stat-label">Technologies</span>
+    </div>
+</div>
                         <a href="#contact" class="btn-gold"><i class="fas fa-paper-plane"></i> Let's Connect</a>
                     </div>
                 </div>
@@ -1954,11 +1971,11 @@
                     </div>
                     <div class="project-card" data-category="web automation" data-aos="flip-left" data-aos-delay="100">
                         <div class="project-image">
-                            <img src="assets/images/project-2.jpg" alt="Portfolio" />
+                            <img src="assets/image/portfolio-image.png" alt="Portfolio" />
                             <div class="project-overlay">
                                 <div class="project-links">
-                                    <a href="#"><i class="fab fa-github"></i></a>
-                                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://github.com/MDeepaK162005/MD_Portfolio"><i class="fab fa-github"></i></a>
+                                    <a href="https://mdeepak162005.github.io/MD_Portfolio/"><i class="fas fa-external-link-alt"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1984,7 +2001,7 @@
                             <div class="project-tech"><span>Python</span><span>Scikit-learn</span><span>Flask</span></div>
                         </div>
                     </div>
-                    <div class="project-card" data-category="web automation" data-aos="flip-left" data-aos-delay="300">
+                    <!-- <div class="project-card" data-category="web automation" data-aos="flip-left" data-aos-delay="300">
                         <div class="project-image">
                             <img src="assets/images/project-4.jpg" alt="Book Recommendation" />
                             <div class="project-overlay">
@@ -1999,8 +2016,8 @@
                             <p>AI-powered book recommendation using collaborative filtering</p>
                             <div class="project-tech"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
                         </div>
-                    </div>
-                    <div class="project-card" data-category="ai python" data-aos="flip-left" data-aos-delay="400">
+                    </div> -->
+                    <!-- <div class="project-card" data-category="ai python" data-aos="flip-left" data-aos-delay="400">
                         <div class="project-image">
                             <img src="assets/images/project-5.jpg" alt="Hospital Donation" />
                             <div class="project-overlay">
@@ -2015,8 +2032,8 @@
                             <p>Full-stack donation management with secure payment integration</p>
                             <div class="project-tech"><span>Django</span><span>PostgreSQL</span><span>Stripe</span></div>
                         </div>
-                    </div>
-                    <div class="project-card" data-category="automation" data-aos="flip-left" data-aos-delay="500">
+                    </div> -->
+                    <!-- <div class="project-card" data-category="automation" data-aos="flip-left" data-aos-delay="500">
                         <div class="project-image">
                             <img src="assets/images/project-6.jpg" alt="WhatsApp Automation" />
                             <div class="project-overlay">
@@ -2031,7 +2048,7 @@
                             <p>B2B SaaS platform for automating business WhatsApp messaging</p>
                             <div class="project-tech"><span>TypeScript</span><span>Node.js</span><span>Next.js</span></div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -2293,7 +2310,7 @@
                         current += increment;
                         if (current >= target) { current = target;
                             clearInterval(counterInterval); }
-                        stat.textContent = current;
+                        stat.firstChild.textContent = current;
                     }, 50);
                 });
             }
