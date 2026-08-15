@@ -317,19 +317,33 @@
             width: 100%;
         }
         .nav-links .btn-nav-gold {
-            padding: 8px 22px;
-            background: var(--gold);
-            color: var(--black);
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 12px;
-        }
-        .nav-links .btn-nav-gold::after { display: none; }
-        .nav-links .btn-nav-gold:hover {
-            background: var(--gold-light);
-            transform: scale(1.05);
-            box-shadow: 0 4px 20px var(--gold-glow);
-        }
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 28px;
+    margin-left: 8px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: var(--black);
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    box-shadow: 0 4px 18px var(--gold-glow);
+    transition: all 0.3s ease;
+}
+
+.nav-links .btn-nav-gold::after {
+    display: none;
+}
+
+.nav-links .btn-nav-gold:hover {
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    color: var(--black);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 25px var(--gold-glow-strong);
+}
 
         .hamburger {
             display: none;
@@ -1711,7 +1725,7 @@
                         </p>
                         <div class="hero-buttons">
                             <a href="#projects" class="btn-gold"><i class="fas fa-rocket"></i> View My Work</a>
-                            <a href="Deepak_Resume_Updated (1).pdf" class="btn-outline-gold"><i class="fas fa-download"></i> Download CV</a>
+                            <a href="Deepak_Resume_Updated.pdf" class="btn-outline-gold"><i class="fas fa-download"></i> Download CV</a>
                         </div>
                         <div class="hero-social">
                             <a href="https://github.com/MDeepaK162005" target="_blank" title="GitHub">
